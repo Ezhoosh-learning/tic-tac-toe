@@ -1,48 +1,89 @@
-.app {
-  text-align: center;
-  margin-top: 50px;
+/* پس‌زمینه کلی دارک */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1f1f2e, #2a2a40);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e0e0e0;
 }
 
+/* ساختار اصلی اپ */
+.app {
+  background: rgba(30, 30, 45, 0.95);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  max-width: 450px;
+  width: 90%;
+}
+
+/* وضعیت بازی */
+.status {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* برد بازی */
 .board {
   display: inline-block;
 }
 
+/* ردیف‌ها */
 .row {
   display: flex;
+  justify-content: center;
 }
 
+/* خانه‌های بازی */
 .square {
-  width: 60px;
-  height: 60px;
-  font-size: 24px;
+  width: 70px;
+  height: 70px;
+  margin: 5px;
+  background-color: #33394d;
+  border: 2px solid #555b6e;
+  font-size: 28px;
   font-weight: bold;
-  border: 1px solid #444;
-  background-color: #fff;
+  color: #f1f1f1;
+  border-radius: 12px;
+  transition: all 0.2s ease;
   cursor: pointer;
 }
 
-.status {
-  font-size: 20px;
-  margin-bottom: 15px;
-  font-weight: bold;
+.square:hover {
+  background-color: #444b61;
+  transform: scale(1.05);
 }
+
+/* دکمه ریست */
 .reset-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  background-color: #007bff;
+  margin-top: 25px;
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #6a5acd, #483d8b);
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .reset-button:hover {
-  background-color: #0056b3;
+  background: linear-gradient(90deg, #5a4bb5, #3b3278);
 }
+
+/* تاریخچه بازی */
 .history {
-  margin-top: 20px;
+  margin-top: 30px;
+  text-align: left;
+  color: #ccc;
 }
 
 .history ul {
@@ -51,19 +92,21 @@
 }
 
 .history li {
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .history button {
-  background: none;
-  border: 1px solid #007bff;
-  color: #007bff;
-  padding: 5px 10px;
-  border-radius: 6px;
+  background-color: transparent;
+  border: 1px solid #8883ff;
+  color: #8883ff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .history button:hover {
-  background-color: #007bff;
+  background-color: #8883ff;
   color: white;
 }
