@@ -1,0 +1,69 @@
+.app {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.board {
+  display: inline-block;
+}
+
+.row {
+  display: flex;
+}
+
+.square {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  font-weight: bold;
+  border: 1px solid #444;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.status {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.reset-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.reset-button:hover {
+  background-color: #0056b3;
+}
+.history {
+  margin-top: 20px;
+}
+
+.history ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.history li {
+  margin-bottom: 5px;
+}
+
+.history button {
+  background: none;
+  border: 1px solid #007bff;
+  color: #007bff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.history button:hover {
+  background-color: #007bff;
+  color: white;
+}
