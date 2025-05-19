@@ -4,10 +4,12 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="game">
-      <h1>Tic Tac Toe</h1>
-      <Board />
-    </div>
+    <>
+      <h1 className="tic-tac-toe">Tic Tac Toe</h1>
+      <div className="game">
+        <Board />
+      </div>
+    </>
   );
 }
 

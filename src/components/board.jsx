@@ -64,17 +64,21 @@ export default function Board() {
         </button>
       </div>
 
-      {/* 🔥 تاریخچه حرکات */}
       <div className="history">
         <h3>Move History</h3>
-        <ul>
-          {history.map((_, move) => (
-            <li key={move}>
-              <button onClick={() => jumpTo(move)}>
-                {move === 0 ? "Go to game start" : `Go to move #${move}`}
-              </button>
-            </li>
-          ))}
+        <ul className="moves">
+          {history.map((_, move) => {
+            const player = move === 0 ? null : (move % 2 === 0 ? "O" : "X");
+            return (
+              <li key={move}>
+                <button onClick={() => jumpTo(move)}>
+                  {move === 0
+                    ? "Go to game start"
+                    : `Go to move #${move} - ${player}`}
+                </button>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>
